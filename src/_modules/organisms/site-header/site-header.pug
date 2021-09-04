@@ -1,0 +1,19 @@
+include ../../molecules/site-nav/site-nav
+
+mixin site-header(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.site-header(class=spec.__class)&attributes(attributes)
+		.menu-overlay
+		.header-wrap
+			.container.flex.justify-between
+				.logo-wrap
+					a.logo-link(href="/")
+						img(src=assetPath + "images/delta_kn.svg" title="Delta Kn" alt="Delta Kn" width="65" height="80")
+				
+				+site-nav({
+					"navs": site.data.navigation.primaryNav,
+					"page": page
+				})
+	

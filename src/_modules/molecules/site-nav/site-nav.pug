@@ -1,0 +1,19 @@
+mixin site-nav(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	
+	nav.nav(class=spec.__class)&attributes(attributes)
+		.nav-mobile.mobile-only
+			.nav-menu
+				.hamburger-menu
+					.nav-line.l1
+					.nav-line.l2
+					.nav-line.l3
+					
+		.nav-links
+			.nav-links__wrap
+				ul.links.md_flex.block.items-center.md_justify-end.justify-start
+					each item, index in spec.navs
+						li.links-item
+							.item-parent(class=(page === item.page ? 'active' : '') data-section= item.page)
+								a(href= item.url data-section= item.page)= item.name

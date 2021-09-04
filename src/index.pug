@@ -1,0 +1,100 @@
+extends _layouts/base
+
+include ./_modules/organisms/homepage-video/homepage-video
+include ./_modules/organisms/who-we-are/who-we-are
+include ./_modules/organisms/featured-video/featured-video
+include ./_modules/organisms/what-we-do/what-we-do
+include ./_modules/organisms/testimonials/testimonials
+include ./_modules/organisms/global-map/global-map
+include ./_modules/organisms/our-team/our-team
+include ./_modules/organisms/contact/contact
+
+block config
+  - isHome = true
+  - var pageTitle = 'Delta Kn – Healthcare Learning'
+  - var page = 'home'
+  - var site = htmlWebpackPlugin.options //global site data
+  - var env = htmlWebpackPlugin.options.env
+  - var assetPath = '/assets/'
+  //- - var assetPath = (env == 'development' ? '/assets/' : '/delta-kn/assets/')
+
+block content
+  +homepage-video({
+    "__img": assetPath + "images/hero_img.png",
+    "__video": assetPath + "images/deltakn_main_vid.mp4",
+    "__vimeo": "https://player.vimeo.com/video/588139964?background=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479&h=b8f38708c8",
+    "__title": "Hero Image",
+    "__text": {
+      "__line1": "Outstanding",
+      "__line2": "learning experiences",
+      "__line3": "in healthcare"
+    }
+  })(id="home" data-section="home")
+
+  +who-we-are({
+    "__titleClass": "lime-green",
+    "__title": "Who we are"
+  })(data-section="home")
+    p We’re a specialist learning agency within AMICULUM
+      sup ® 
+      | dedicated to optimizing the capabilities and performance of global healthcare audiences. We partner with leading pharmaceutical companies and healthcare associations to develop inspirational learning that makes a difference.
+    
+    p Our team is a unique mix of scientists, teachers, developers, creatives and healthcare practitioners, all with a united passion for learning.
+    
+    p Whether you’re supporting teams through clinical development of a product or looking at customer engagement post-launch, we’re ready to start the journey when you are!
+  
+  +featured-video({
+    "__video": assetPath + "images/deltakn_logo_animation.mp4",
+    "__vimeo": "https://player.vimeo.com/video/588139913?background=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479&h=df34a30c86"
+  })(data-section="home")
+
+  +what-we-do({
+    "__titleClass": "lime-green",
+    "__title": "What we do",
+    "__list": site.data.what_we_do.list
+  })(id="what-we-do" data-section="what-we-do")
+
+  +testimonials({
+    "__titleClass": "lime-green",
+    "__title": "Testimonials",
+    "__list": site.data.testimonials.list
+  })(id="testimonials" data-section="testimonials")
+    p 
+      strong Happy clients in diverse therapy areas: 
+      | we strive for excellence and aim to delight our clients by meeting or exceeding their expectations in terms of both content and creative learning approaches. We start our projects with a sense of adventure – every assignment brings a fresh set of challenges and an opportunity to create an outstanding learning experience.
+
+  +global-map({
+    "__titleClass": "lime-green",
+    "__title": "Where we are",
+    "__data": "/api/map.json"
+  })(id="where-we-are" data-section="where-we-are")
+    p The Delta Kn team is located in the USA, Asia and Europe, and in partnership with our wider AMICULUM colleagues, we can provide support across the world.
+
+  +our-team({
+    "__class": "two-col",
+    "__titleClass": "lime-green",
+    "__title": "Our team expertise",
+    "__list": site.data.expertise.list
+  })(id="team" data-section="team")
+    p We’re a fun and friendly mix of specialisms. If you’re just as passionate about creating great learning as we are, whatever your background, take a look at our specialist roles and get in touch if you think one of these could be you!
+  
+  +join-us({
+    "__titleClass": "lime-green",
+    "__title": "Join us",
+  })(id="join-us" data-section="join-us")
+    p We are always interested in talented individuals who are looking for a different type of agency career, one where creativity, dedication and either scientific or digital expertise are used to create stunning learning experiences. If you think you’ve got what it takes, why not send in your CV?
+
+    //- p 
+      //- strong Location: 
+      //- | UK, USA, Singapore, Shanghai
+
+    p 
+      strong Check for vacancies: 
+      a(href="https://careers.amiculum.biz/" target="_blank" rel="noopener") https://careers.amiculum.biz/
+  
+  +contact({
+    "__titleClass": "lime-green",
+    "__title": "Contact us"
+  })(id="contact" data-section="contact")
+    p If you’d like to find out more about anything you’ve seen on the Delta Kn website, or have a learning-related enquiry or just a great idea, send us an email: 
+      a(href="mailto:team@delta-kn.biz") team@delta-kn.biz

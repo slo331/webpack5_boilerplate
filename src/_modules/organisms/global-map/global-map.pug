@@ -1,0 +1,21 @@
+include ../../atoms/section-title/section-title
+include ../../molecules/map/map
+
+mixin global-map(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.global-map(class=spec.__class)&attributes(attributes)
+    .container
+      +section-title({
+        "__class": spec.__titleClass,
+        "__title": spec.__title
+      })
+
+      .content
+        if block
+          block
+        
+      +map({
+        "__data": spec.__data
+      })

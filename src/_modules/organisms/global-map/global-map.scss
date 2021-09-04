@@ -1,0 +1,40 @@
+//global-map styles 
+.global-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: url($path + 'map_bg@2x.png') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2rem 0;
+
+  @include desktop {
+    padding: 3rem 0;
+  }
+
+  .container {
+    @include mobile {
+      padding: 0;
+
+      .section-title,
+      .content {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  .content {
+    margin: 2rem 0 0;
+    color: $white;
+    padding: 0;
+
+    @include lgDesktop {
+      margin: 3rem 0 0;
+    }
+
+    p {
+      margin: 1rem 0;
+      font-size: calc-em(18px);
+    }
+  }
+}

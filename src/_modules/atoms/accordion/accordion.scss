@@ -1,0 +1,186 @@
+//accordion styles 
+.accordion {
+  $p: &;
+
+  &-item {
+    position: relative;
+    margin: 0 0 1rem;
+    
+    &.is-open {
+      #{$p}-label {
+        .arrow {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &.darkBlue {
+      #{$p}-label {
+        background: $darkBlue;
+        
+        &:before {
+          background: $text;
+        }
+      }  
+    }
+
+    &.blue {
+      #{$p}-label {
+        background: $text;
+        
+        &:before {
+          background: $arrowBlue;
+        }
+      }  
+    }
+
+    &.lightBlue {
+      #{$p}-label {
+        background: $arrowBlue;
+        
+        &:before {
+          background: $arrowBlue2;
+        }
+      }  
+    }
+
+    &.pastelBlue {
+      #{$p}-label {
+        background: $arrowBlue2;
+        
+        &:before {
+          background: $arrowBlue3;
+        }
+      }  
+    }
+
+    #{$p}-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem 1rem 3rem;
+      background: $grey1;
+      color: $white;
+      overflow: hidden;
+      font-size: calc-em(18px);
+      line-height: 1.3;
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.25);
+      position: relative;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+
+      @include desktop {
+        padding: 1rem 2rem 1rem 3.5rem;
+        font-size: calc-em(28px);
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -78px;
+        background: $grey2;
+        transform: skew(-30deg);
+      }
+
+      .arrow {
+        position: absolute;
+        right: 25px;
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-top: 2px solid $white;
+        border-left: 2px solid $white;
+        transition: all .2s ease-in-out;
+        transform-origin: center center;
+        transform: rotate(135deg);
+
+        @include desktop {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    #{$p}-content {
+      display: none;
+      // padding: 20px;
+      border: 1px solid $blue;
+      background: $white;
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.25);
+
+      .content {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        @include desktop {
+          min-height: 200px;
+          padding: 3rem 20px;
+        }
+
+        .row {
+          width: 100%;
+
+          .rte {
+            padding: 0 1rem;
+
+            @include desktop {
+              padding: 0 5rem;
+            }
+          }
+        }
+
+        &-wrap {
+          padding: 0 1rem;
+
+          @include desktop {
+            padding: 0 5.5rem;
+          }
+
+          .two-col {
+            column-count: 1;
+
+            @include desktop {
+              column-count: 2;
+            }
+
+            li {
+              padding: 0 0 10px;
+            }
+          }
+
+          .check-bullet {
+            li {
+              display: flex;
+              align-items: center;
+              position: relative;
+
+              &:before{
+                content: '';
+                margin: 0 20px 0 0;
+                display: block;
+                width: 10px;
+                height: 20px;
+                border: solid $limeGreen;
+                border-width: 0 5px 5px 0;
+                transform: rotate(45deg);
+              }
+            }
+          }
+
+          .footnote {
+            font-size: calc-em(12px);
+          }
+        }
+      }
+    }
+  }
+}

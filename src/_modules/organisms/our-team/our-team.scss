@@ -1,0 +1,63 @@
+//our-team styles 
+.our-team {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: url($path + 'white_bg.png') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2rem 0;
+
+  @include desktop {
+    padding: 3rem 0;
+  }
+
+  .content {
+    margin: 2rem 0 0;
+    color: $text;
+    padding: 0;
+
+    @include lgDesktop {
+      margin: 3rem 0 0;
+    }
+
+    p {
+      margin: 1rem 0;
+      font-size: calc-em(18px);
+    }
+  }
+
+  &.two-col {
+    .list {
+      .list-wrap {
+        .row {
+          .card {
+            width: 100%;
+
+            @include tablet {
+              width: 50%;
+            }
+
+            @include desktop {
+              width: 50%;
+            }
+
+            &-wrap {
+              .card-header {
+                align-items: flex-start;
+
+                .title-wrap {
+                  max-width: 100%;
+
+                  @include desktop {
+                    max-width: 80%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

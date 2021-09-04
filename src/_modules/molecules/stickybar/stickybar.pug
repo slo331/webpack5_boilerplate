@@ -1,0 +1,16 @@
+mixin stickybar(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .sticky-bar(class=spec.__class)&attributes(attributes)
+    .sticky-wrap
+      ul.bar-wrap 
+        li.bar-item
+          a(href="mailto:team@delta-kn.biz" target="_blank" rel="noopener" aria-label="Email DeltaKn")
+            img(src=assetPath + "images/email.svg" title="Email DeltKn" alt="Email DeltKn" width="40" height="30")
+        //- li.bar-item
+        //-   a(href="http://www.google.co.uk/maps/place/Mudskipper+Business+Ltd/@53.3006453,-2.1031615,17z/data=!3m1!4b1!4m5!3m4!1s0x487a4bce9629c141:0x6e4ebe6c8c5a6d9d!8m2!3d53.3006453!4d-2.1009728" target="_blank" rel="noopener")
+        //-     img(src=assetPath + "images/pin.svg" title="Locate DeltKn" alt="Locate DeltKn" width="40" height="30")
+        li.bar-item
+          a(href="https://www.linkedin.com/company/delta-kn" target="_blank" rel="noopener" aria-label="DeltaKn Linkedin")
+            img(src=assetPath +"images/linkedin.svg" title="DeltKn Linkedin" alt="DeltKn Linkedin" width="40" height="30")

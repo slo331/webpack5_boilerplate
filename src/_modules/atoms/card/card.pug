@@ -1,0 +1,32 @@
+mixin card(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .card.col-lg-4.col-md-6.col-sm-6.col-xs-12(class=spec.__class)&attributes(attributes)
+    .card-wrap
+      .card-header
+        if spec.__img
+          .img-wrap
+            img(src=assetPath + "/images/" +spec.__img title=spec.__title alt=spec.__title width="315" height="150")
+        .title-wrap
+          .title=spec.__title
+      
+      if spec.__quote
+        .card-quote
+          .quote-img
+            svg(xmlns='http://www.w3.org/2000/svg' width='45.982' height='54.382' viewBox='0 0 45.982 54.382')
+              g#Group_461(data-name='Group 461' transform='translate(-50.486 -2249.107)')
+                path#Path_4657(data-name='Path 4657' d='M96.469,2249.107l-31.319,54.382v-54.382Z' fill='#cecece' fill-rule='evenodd' opacity='0.702')
+                path#Path_4658(data-name='Path 4658' d='M81.663,2249.107l-31.177,54.382v-54.382Z' fill='#cecece' fill-rule='evenodd' opacity='0.702')
+
+          .quote-wrap=spec.__quote
+          
+          .quote-img
+            svg(xmlns='http://www.w3.org/2000/svg' width='45.982' height='54.382' viewBox='0 0 45.982 54.382')
+              g#Group_461(data-name='Group 461' transform='translate(-50.486 -2249.107)')
+                path#Path_4657(data-name='Path 4657' d='M96.469,2249.107l-31.319,54.382v-54.382Z' fill='#cecece' fill-rule='evenodd' opacity='0.702')
+                path#Path_4658(data-name='Path 4658' d='M81.663,2249.107l-31.177,54.382v-54.382Z' fill='#cecece' fill-rule='evenodd' opacity='0.702')
+      
+      if spec.__content
+        .card-content
+          .content-wrap!=spec.__content

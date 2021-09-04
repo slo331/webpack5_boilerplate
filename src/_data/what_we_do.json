@@ -1,0 +1,40 @@
+{
+  "list": [
+    {
+      "class": "darkBlue",
+      "dataId": "acc1",
+      "title": "Strategy and learning design",
+      "content": "<div class='row'><div class='column col-md-6 col-sm-6 col-xs-12'><div class='rte md_px-20'><p><strong>We’re all about... </strong></p><ul><li>Learning needs analysis</li><li>Action mapping</li><li>Concise, visual resources</li><li>Changing behaviour, not just knowledge</li><li>Improving performance </li><li>The right resources at the right time</li></ul></div></div><div class='column col-md-6 col-sm-6 col-xs-12'><div class='rte md_px-20'><p> <strong>And not... </strong></p><ul><li>Pure content-focused courses</li><li>Next, next, next... (endless, uninspiring slides)</li><li>Shoehorning in information ‘just in case’ it might be useful</li></ul></div></div></div>"
+    },
+    {
+      "class": "blue",
+      "dataId": "acc2",
+      "title": "Multidevice learning",
+      "content": "<div class='content-wrap md_px-20'><p><strong>Whether learning is in the office, at home or out on the go, we’ve got it covered!</strong></p><p>Our writers and technologists work together in tightly knit teams to develop outstanding content for the learner in the optimal format, whatever that might be!</p></div>"
+    },
+    {
+      "class": "lightBlue",
+      "dataId": "acc3",
+      "title": "Virtual events",
+      "content": "<div class='content-wrap md_px-20'><p><strong>We pride ourselves on making each virtual event a positive and productive experience – and one you’ll want to repeat regularly (that’s no mean feat!).</strong></p><p><strong>Our original recipe for success:</strong></p><ul class='two-col check-bullet'><li>Design the right meeting format</li><li>Prepare content carefully</li><li>Harness the latest web conference technologies</li><li>Provide live technical support</li><li>Insert the right amount of interactivity</li><li>Undisclosed secret stuff</li></ul></div>"
+    },
+    {
+      "class": "pastelBlue",
+      "dataId": "acc4",
+      "title": "Instructor-led packages",
+      "content": "<div class='content-wrap md_px-20'><p><strong>The mission here is very simple – make the experience for the facilitator and audience as memorable and fulfilling as possible.</strong></p><p>Our expert-led training packages consist of beautifully presented, impactful materials with comprehensive facilitator notes and a generous sprinkling of well-structured, interactive exercises.</p></div>"
+    },
+    {
+      "class": "lightBlue",
+      "dataId": "acc5",
+      "title": "Medical content development",
+      "content": "<div class='content-wrap md_px-20'><p><strong>This is the foundation of our learning content – the highest-quality medical writing by our talented medical instructional designers.<sup>*</sup></strong></p><p>It might be assumed, but it’s certainly worth reinforcing, that our medical writing expertise underpins the success of our projects.</p> <p>From a simple printed factsheet to a full-scale digital training programme, we use the same rigorous approach combining scientific relevance and accuracy with outstanding instructional design practice. Every time.</p><div class='footnote'>*Noun: medical writer expertly trained in instructional design; origin: 2010s, Delta Kn.</div></div>"
+    },
+    {
+      "class": "darkBlue",
+      "dataId": "acc6",
+      "title": "Point-of-need resources",
+      "content": "<div class='content-wrap md_px-20'><p><strong>AKA ‘just-in-time’ or ‘on-the-job’ resources</strong></p><p>The timing of learning is crucial. Some learning is more appropriate, and more effective, at the ‘point of need’ – learners tap into information when they need it, whether it’s to solve a problem, perform a specific task or quickly update their skills.</p><p>We’re hot on conserving brain power, minimizing burn rate and maximizing learning efficiency – that means differentiating between core learning materials and supporting resources.</p></div>"
+    }
+  ]
+}

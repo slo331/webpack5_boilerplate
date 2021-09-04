@@ -1,0 +1,15 @@
+include ../../atoms/accordion/accordion
+
+mixin accordion-list(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .accordion-list(class=spec.__class)&attributes(attributes)
+    ul.list-wrap
+      each item, index in spec.__list
+        +accordion({
+          "__class": item.class,
+          "__dataId": item.dataId,
+          "__title": item.title
+        })
+          .content!= item.content

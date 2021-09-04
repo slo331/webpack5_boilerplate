@@ -1,0 +1,17 @@
+include ../../atoms/card/card
+
+mixin listing(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .list(class=spec.__class)&attributes(attributes)
+    .list-wrap
+      .row
+        each item, index in spec.__list
+          +card({
+            "__class": item.category,
+            "__img": item.img,
+            "__title": item.title,
+            "__quote": item.quote,
+            "__content": item.content
+          })

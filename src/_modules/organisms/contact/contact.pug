@@ -1,0 +1,17 @@
+include ../../atoms/section-title/section-title
+
+mixin contact(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.contact(class=spec.__class)&attributes(attributes)
+    .container
+      +section-title({
+        "__class": spec.__titleClass,
+        "__title": spec.__title
+      })
+
+      .content 
+        if block
+          block
+

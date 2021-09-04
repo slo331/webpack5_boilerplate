@@ -1,0 +1,229 @@
+// Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import Third-party plugins' CSS here
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import '../../node_modules/normalize.css/normalize';
+
+// Site Mixins, Variables and Fonts here
+@import "./_mixins";
+@import "./_var";
+@import "./_styles";
+// @import "./_fonts";
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  font-size: $base-fontsize;
+}
+
+body {
+  font-family: $primaryFont;
+  color: $text;
+  line-height: $base-lineheight;
+  margin: 0;
+  padding: 0;
+
+  main {
+    margin: 80px 0 0;
+
+    @include desktop {
+      margin: 105px 0 0;
+    }
+  }
+
+  &.expanded {
+    overflow: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    font-weight: $semibold;
+  }
+
+  h1 {
+    font-size: calc-em(36px);
+
+    @include desktop {
+      font-size: calc-em(50px);
+    }
+  }
+
+  h2 {
+    font-size: calc-em(22px);
+
+    @include desktop {
+      font-size: calc-em(38px);
+    }
+  }
+
+  h3 {
+    font-size: calc-em(20px);
+
+    @include desktop {
+      font-size: calc-em(30px);
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  a {
+    transition: all .2s ease-in-out;
+    
+    &:hover {
+      @include desktop {
+        color: $purple;
+        text-shadow: 0px 0px 1px $purple;
+      }
+    }
+  }
+
+  .rte {
+    ul {
+      list-style-type: disc;
+      margin: 0 0 0 10px;
+      padding: 0 0 0 10px;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .row {
+    margin: 0 -10px;
+
+    .column {
+      border-right: none;
+
+      @include desktop {
+        border-right: 1px solid $blue;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  [class^="col-"], [class*=" col-"] {
+    padding: 0 10px;
+  }  
+}
+
+// Print layout here
+@media print {
+  body {
+    .site-header {
+      position: relative;
+    }
+  
+    main {
+      margin: 0px;
+
+      section {
+        padding: 2rem 0;
+
+        &:first-child {
+          padding: 0;
+        }
+
+        &.what-we-do, &.testimonials, &.global-map, &.our-team, &.join-us {
+          background-attachment: unset;
+        }
+
+        &.testimonials {
+          .list {
+            .card {
+              width: 50%;
+            }
+          }
+        }
+
+        &.our-team {
+          &.two-col {
+            .list {
+              .list-wrap {
+                .row {
+                  .card {
+                    // width: 50%;
+
+                    &-wrap {
+                      .card-header, .card-content {
+                        height: auto !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          } 
+        }
+
+        .accordion-list {
+          .accordion-content {
+            display: block;
+          }
+        }
+
+        .card-wrap .card-header .title-wrap:after,
+        .section-title .title:after {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .sticky-bar {
+      display: none;
+    }
+
+    footer {
+      .site-footer {
+        display: block;
+        padding: 2rem 0;
+
+        .container {
+          display: block;
+
+          .footer {
+            &-amiculum {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Import Modules CSS here
+@import "../_modules/atoms/button/button";
+@import "../_modules/atoms/section-title/section-title";
+@import "../_modules/atoms/card/card";
+@import "../_modules/atoms/accordion/accordion";
+@import "../_modules/molecules/site-nav/site-nav";
+@import "../_modules/molecules/stickybar/stickybar";
+@import "../_modules/molecules/listing/listing";
+@import "../_modules/molecules/accordion-list/accordion-list";
+@import "../_modules/molecules/map/map";
+@import "../_modules/organisms/site-header/site-header";
+@import "../_modules/organisms/homepage-video/homepage-video";
+@import "../_modules/organisms/who-we-are/who-we-are";
+@import "../_modules/organisms/featured-video/featured-video";
+@import "../_modules/organisms/what-we-do/what-we-do";
+@import "../_modules/organisms/testimonials/testimonials";
+@import "../_modules/organisms/global-map/global-map";
+@import "../_modules/organisms/our-team/our-team";
+@import "../_modules/organisms/join-us/join-us";
+@import "../_modules/organisms/contact/contact";
+@import "../_modules/organisms/site-footer/site-footer";

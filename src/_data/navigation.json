@@ -1,0 +1,39 @@
+{
+  "primaryNav": [
+    {
+      "name": "Home",
+      "url": "#home",
+      "page": "home"
+    },
+    {
+      "name": "What we do",
+      "url": "#what-we-do",
+      "page": "what-we-do"
+    },
+    {
+      "name": "Testimonials",
+      "url": "#testimonials",
+      "page": "testimonials"
+    },
+    {
+      "name": "Where we are",
+      "url": "#where-we-are",
+      "page": "where-we-are"
+    },
+    {
+      "name": "Team expertise",
+      "url": "#team",
+      "page": "team"
+    },
+    {
+      "name": "Join us",
+      "url": "#join-us",
+      "page": "join-us"
+    },
+    {
+      "name": "Contact",
+      "url": "#contact",
+      "page": "contact"
+    }
+  ]
+}

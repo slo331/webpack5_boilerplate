@@ -1,0 +1,216 @@
+//site-nav styles
+.nav {
+  $p: &;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+  @include desktop {
+    flex: 1;
+    position: relative;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+  #{$p}-mobile {
+    position: relative;
+    z-index: 3;
+
+    @include tablet {
+      display: inline-block;
+    }
+  
+    #{$p}-menu {  
+      .hamburger-menu {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        right: 0px;
+        transition: all .5s ease-in-out;
+  
+        &.active {
+          .nav-line {
+            background: $purple;
+            transition: all .5s ease-in-out;
+  
+            &.l1, &.l3 {
+              top: 8px;
+            }
+  
+            &.l2 {
+              display: none;
+            }
+          }
+  
+          &.rotate {
+            .l1 {
+              transform: rotate(45deg);
+            }
+  
+            .l3 {
+              width: 100%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+  
+        #{$p}-line {
+          width: 30px;
+          height: 3px;
+          border-radius: 4px;
+          background: $purple;
+          transition: all .5s ease-in-out;
+          position: absolute;
+          left: 0;
+  
+          &.l1 {
+            top: 0;
+          }
+  
+          &.l2 {
+            display: block;
+            top: 8px;
+          }
+  
+          &.l3 {
+            top: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  #{$p}-links {
+    display: none;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 71px;
+    background: $white;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.25);
+    
+    @include desktop {
+      display: block;
+      height: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    &__wrap {
+      height: 100%;
+      width: 100%;
+
+      .links {
+        width: 100%;
+        height: auto;
+
+        @include tablet {
+          display: block;
+        }
+
+        @include desktop {
+          height: 100%;
+        }
+
+        &-item {
+          height: auto;
+          margin: 0;
+          border-bottom: 1px solid $grey2;
+          // cursor: pointer;
+
+          @include desktop {
+            height: 100%;
+            margin: 0 0.75rem;
+            border-bottom: none;
+          }
+
+          @include lgDesktop {
+            margin: 0 1rem;
+          }
+
+          &:last-child {
+            margin: 0;
+
+            @include desktop {
+              margin: 0 0 0 0.75rem;
+            }
+
+            @include lgDesktop {
+              margin: 0 0 0 1rem;
+            }
+          }
+
+          .item {
+            &-parent {
+              position: relative;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+
+              @include desktop {
+                align-items: center;
+              }
+
+              a {
+                font-weight: $semibold;
+                color: $purple;
+                transition: all .5s ease-in-out;
+                padding: 20px;
+                display: flex;
+                height: 100%;
+                align-items: center;
+
+                @include desktop {
+                  padding: 0;
+                }
+              }
+
+              &:after {
+                content: '';
+                display: none;
+                position: absolute;
+                width: 0;
+                height: 5px;
+                background: $purple;
+                z-index: 1;
+                bottom: -15px;
+                transform: center center;
+                transition: all .5s ease-in-out;
+
+                @include desktop {
+                  display: block;
+                }
+              }
+              
+              &.active,
+              &:hover {
+                a {
+                  background: $purple;
+                  color: $white;
+                  text-shadow: 0px 0px 1px $purple;
+
+                  @include desktop {
+                    background: transparent;
+                    color: $purple;
+                  }
+                }
+
+                &:after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

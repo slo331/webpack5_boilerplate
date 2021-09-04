@@ -1,0 +1,17 @@
+include ../../atoms/section-title/section-title
+include ../../molecules/accordion-list/accordion-list
+
+mixin what-we-do(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.what-we-do(class=spec.__class)&attributes(attributes)
+    .container
+      +section-title({
+        "__class": spec.__titleClass,
+        "__title": spec.__title
+      })
+
+      +accordion-list({
+        "__list": spec.__list
+      })

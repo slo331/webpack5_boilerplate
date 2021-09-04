@@ -4,12 +4,14 @@
   "description": "webpack 5",
   "main": "index.js",
   "browserslist": [
+    "> 1%",
+    "last 2 versions",
     "ie 11"
   ],
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack server --open --config webpack.config.js"
   },
   "author": "Stephen",
   "license": "MIT",
@@ -17,21 +19,48 @@
     "@babel/core": "^7.15.4",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.15.4",
+    "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
+    "cssnano": "^5.0.8",
+    "fast-sass-loader": "^2.0.0",
     "html-webpack-plugin": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.1.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.2.2",
+    "multi-json-loader": "^0.2.1",
     "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "sass-loader": "^12.1.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
     "style-loader": "^3.2.1",
+    "tailwindcss": "^1.9.6",
+    "terser-webpack-plugin": "^5.2.3",
     "webpack": "^5.51.2",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.1.0"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.13",
+    "@amcharts/amcharts4-geodata": "^4.1.21",
+    "@babel/polyfill": "^7.12.1",
     "core-js": "^3.17.2",
-    "jquery": "^3.6.0"
-  }
+    "enquire.js": "^2.1.6",
+    "headroom.js": "^0.12.0",
+    "jquery": "^3.6.0",
+    "jquery-match-height": "^0.7.2",
+    "normalize.css": "^8.0.1",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "assetPath": "assets"
 }

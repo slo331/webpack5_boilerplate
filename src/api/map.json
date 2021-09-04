@@ -1,0 +1,38 @@
+[
+  {
+    "title": "USA",
+    "latitude": 37.7837304,
+    "longitude": -82.4458825,
+    "col": 1,
+    "locations": [
+      "Chicago", "Princeton"
+    ]
+  },
+  {
+    "title": "EUROPE",
+    "latitude": 54.7023545,
+    "longitude": -3.2765753,
+    "col": 2,
+    "locations": [
+      "Dundee", "Manchester", "Bollington", "Oxford", "Richmond", "Brighton", "Bern"
+    ]
+  },
+  {
+    "title": "MENA",
+    "latitude": 23.4241,
+    "longitude": 53.8478,
+    "col": 1,
+    "locations": [
+      "Dubai"
+    ]
+  },
+  {
+    "title": "ASIA",
+    "latitude": 1.3521,
+    "longitude": 103.8198,
+    "col": 1,
+    "locations": [
+      "Shanghai", "Hong Kong", "Singapore", "Auckland"
+    ]
+  }
+]

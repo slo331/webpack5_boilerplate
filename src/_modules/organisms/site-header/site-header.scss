@@ -1,0 +1,124 @@
+//site-header styles 
+.site-header {
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: all .8s ease-in-out;
+  z-index: 2;
+
+  &.headroom {
+    transition: all .8s ease-in-out;
+
+    &.headroom--pinned {
+      position: fixed;
+      z-index: 10;
+      right: 0;
+      left: 0;
+      top: 0;
+            
+      .header-wrap {
+        .container {
+          .logo-wrap {
+            a {
+              height: 56px;
+
+              @include desktop {
+                height: 57px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.headroom--unpinned {
+      .header-wrap {
+        .container {
+          .logo-wrap {
+            a {
+              height: 56px;
+
+              @include desktop {
+                height: 57px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.headroom--top {
+      .header-wrap {
+        .container {
+          .logo-wrap {
+            a {
+              height: 56px;
+
+              @include desktop {
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.75);
+    z-index: 1;
+  }
+
+  .header-wrap {
+    padding: 10px 0;
+    background: $white;
+    border-bottom: 5px solid $limeGreen;
+    position: relative;
+    transition: all .2s ease-in-out;
+    z-index: 4;
+
+    .container {
+      align-items: center;
+      padding: 0 20px;
+
+      @include desktop {
+        align-items: unset;
+        padding: 0 30px;
+      }
+
+      .logo-wrap {
+        height: auto;
+        width: 50%;
+        line-height: 0;
+
+        @include desktop {
+          width: auto;
+          height: auto;
+        }
+  
+        a {
+          display: inline-block;
+          height: 56px;
+          line-height: 1;
+          transition: all .1s linear;
+  
+          @include desktop {
+            height: 80px;
+          }
+  
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

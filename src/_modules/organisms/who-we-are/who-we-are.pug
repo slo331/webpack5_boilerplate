@@ -1,0 +1,16 @@
+include ../../atoms/section-title/section-title
+
+mixin who-we-are(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.who-we-are(class=spec.__class)&attributes(attributes)
+    .container
+      +section-title({
+        "__class": spec.__titleClass,
+        "__title": spec.__title
+      })
+
+      .content 
+        if block
+          block

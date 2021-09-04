@@ -1,0 +1,21 @@
+include ../../molecules/listing/listing
+include ../../atoms/section-title/section-title
+
+mixin testimonials(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.testimonials(class=spec.__class)&attributes(attributes)
+    .container
+      +section-title({
+        "__class": spec.__titleClass,
+        "__title": spec.__title
+      })
+
+      .content 
+        if block
+          block
+
+      +listing({
+        "__list": spec.__list
+      })

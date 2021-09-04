@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "category": "blue bottom-border",
+      "title": "Learning strategy",
+      "content": "<p><strong>Key responsibilities:</strong> <br/> Driving force behind delivering strategically relevant learning programmes</p> <p><strong>Individual attributes:</strong> <br/> Results driven, inquisitive, always striving for more</p>"
+    },
+    {
+      "category": "purple bottom-border",
+      "title": "Client service and project management",
+      "content": "<p><strong>Key responsibilities:</strong> <br/> Building client relationships while spinning multiple project plates at once – and delivering them on time, on brief and on budget</p> <p><strong>Individual attributes:</strong> <br/> Team player, multitasker, calm at all times</p>"
+    },
+    {
+      "category": "lime bottom-border",
+      "title": "Instructional design and medical writing",
+      "content": "<p><strong>Key responsibilities:</strong> <br/> Creating scientifically driven learning experiences that stand out from the crowd across any format</p> <p><strong>Individual attributes:</strong> <br/> Scientifically curious, creative, perfectionist</p>"
+    },
+    {
+      "category": "orange bottom-border",
+      "title": "Face-to-face/classroom training and facilitation",
+      "content": "<p><strong>Key responsibilities:</strong> <br/> Designing and delivering innovative and active training sessions for all audiences</p> <p><strong>Individual attributes:</strong> <br/> Poised presenter, charming challenger, credible expert</p>"
+    },
+    {
+      "category": "blue bottom-border",
+      "title": "E-learning development and virtual event technical support",
+      "content": "<p><strong>Key responsibilities:</strong> <br/> Bringing to life our first-class content through a variety of authoring platforms and delivering engaging, memorable virtual meetings</p> <p><strong>Individual attributes:</strong> <br/> Technical genius, patient perfectionist, calm under pressure</p>"
+    },
+    {
+      "category": "purple bottom-border",
+      "title": "UX, animation and multimedia content development",
+      "content": "<p><strong>Key responsibilities:</strong> <br/> Bringing to life our scientific content in a format that meets every need – on the go, on your desktop, on your tablet</p> <p><strong>Individual attributes:</strong> <br/> Creative curiosity, boundary stretcher, playful animator</p>"
+    }
+  ]
+}

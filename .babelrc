@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["@babel/env", {
+    [ "@babel/env", {
       "targets": {
         "edge": "17",
         "firefox": "60",
@@ -9,8 +9,8 @@
         "ie": "11"
       },
       "useBuiltIns": "usage",
-      "corejs": "3.6.5"
-    }]
+      "corejs": { "version": "3.17", "proposals": true }
+    } ]
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "plugins": [ "@babel/plugin-proposal-class-properties" ]
 }

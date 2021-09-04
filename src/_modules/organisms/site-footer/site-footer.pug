@@ -1,0 +1,22 @@
+mixin site-footer(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .site-footer(class=spec.__class)&attributes(attributes)
+    .container.md_flex.block.justify-between.items-center
+      .footer-item(class="md_w-1/2 w-full")
+        .footer-links
+          ul.links-wrap 
+            li.link-item 
+              a(href="https://www.amiculum-access.biz/assets/pdf/amiculum-website-privacy-policy-v0.3.pdf" target="_blank" rel="noopener") Privacy policy 
+            li.link-item 
+              a(href="https://www.amiculum-access.biz/assets/pdf/amiculum-website-cookies-policy-v0.3.pdf" target="_blank" rel="noopener") Cookies policy 
+        .footer-copyright
+          | © 2021 Delta Kn. Delta Kn is part of AMICULUM, an independent healthcare communications and learning business with offices in Auckland, Shanghai, Singapore, Dubai, London, Oxford, Manchester, Princeton and Chicago. 
+          a(href="http://www.amiculum.biz/" target="_blank" rel="noopener") www.amiculum.biz 
+          | and 
+          a(href="http://www.altogetherdifferent.biz/" target="_blank" rel="noopener") www.altogetherdifferent.biz
+      .footer-item(class="md_w-1/2 w-full")
+        .footer-amiculum 
+          a(href="http://www.amiculum.biz/" target="_blank" rel="noopener")
+            img(src=assetPath + "images/amiculum_logo.svg" title="Amiculum" alt="Amiculum" width="390" height="42")

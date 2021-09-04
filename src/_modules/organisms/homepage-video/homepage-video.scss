@@ -1,0 +1,179 @@
+//homepage-video styles
+.homepage-video {
+  border-bottom: 5px solid $limeGreen;
+
+  .video {
+    position: relative;
+    height: 100%;
+
+    &-wrap {
+      position: relative;
+    }
+
+    &-holder {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      transition: all .2s ease-in-out;
+
+      @include tablet {
+        height: 400px;
+      }
+
+      @include desktop {
+        height: calc(100vh - 109px);
+        max-height: 700px;
+      }
+
+      @include lgDesktop {
+        max-height: calc(100vh - 109px);
+      }
+
+      img, video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      iframe {
+        width: 100vw;
+        min-height: 100vh;
+
+        //- Given a 4:5 aspect ratio, 5/4*100 = 125
+        height: 125vw;
+        //- Given a 4:5 aspect ratio, 4/5*100 = 80
+        min-width: 100vh;
+
+        @include desktop {
+          //- Given a 16:9 aspect ratio, 9/16*100 = 56.25
+          height: 56.25vw;
+          //- Given a 16:9 aspect ratio, 16/9*100 = 177.77
+          min-width: 177.77vh;
+        }
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      display: inline-flex;
+      align-items: center;
+
+      .container {
+        display: inline-block;
+        padding: 0 20px;
+
+        .banner-text {
+          display: inline-block;
+          position: relative;
+          font-size: calc-em(24px);
+          left: 0;
+
+          @include desktop {
+            font-size: calc-em(50px);
+          }
+
+          @include lgDesktop {
+            left: -55px;
+          }
+
+          .text {
+            padding: 10px 10px;
+            width: auto;
+            display: table;
+            margin: 0 0 8px 30px;
+            line-height: 100%;
+            color: $white;
+            position: relative;
+            z-index: 0;
+
+            @include desktop {
+              padding: 10px 20px;
+              margin: 0 0 10px 55px;
+            }
+
+            &:first-child {
+              &:before {
+                position: absolute;
+                content: '';
+                display: inline-block;
+                background: url($path + 'blue_quote.svg') no-repeat;
+                background-size: contain;
+                z-index: 1;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                left: -30px;
+                
+                @include desktop {
+                  width: 55px;
+                  height: 55px;
+                  left: -55px;
+                }
+              }
+            }
+
+            &:last-child {
+              &:before {
+                position: absolute;
+                content: '';
+                display: inline-block;
+                background: url($path + 'blue_quote.svg') no-repeat;
+                background-size: contain;
+                z-index: 1;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                right: -35px;
+                
+                @include desktop {
+                  width: 55px;
+                  height: 55px;
+                  right: -65px;
+                }
+              }
+            }
+
+            &:after {
+              position: absolute;
+              content: '';
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              z-index: -1;
+            }
+
+            &.lime-green {
+              &:after {
+                background: rgba(192,215,48,0.7);
+              }
+            }
+
+            &.cyan {
+              &:after {
+                background: rgba(0,167,225,0.7);
+              }
+            }
+
+            &.pblue {
+              &:after {
+                background: rgba(25,68,148,0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

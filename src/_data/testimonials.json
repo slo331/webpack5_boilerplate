@@ -1,0 +1,40 @@
+{
+  "list": [
+    {
+      "category": "blue",
+      "img": "neurology_img.jpg",
+      "title": "Neurology",
+      "quote": "... Thanks for sending over. Wow it’s come out so nicely. I really liked how the patient videos turned out. They add tremendous perspective to the patient’s journey."
+    },
+    {
+      "category": "purple",
+      "img": "oncology_img.jpg",
+      "title": "Oncology",
+      "quote": "Hi Clare and team, first of all, the module looks fantastic! I’m so happy with how it turned out and I love the voiceover – thanks for suggesting him!"
+    },
+    {
+      "category": "orange",
+      "img": "respiratory_img.jpg",
+      "title": "Respiratory medicine",
+      "quote": "We are DELIGHTED with the website, you have done such a fantastic job – exceeded all expectations (and that’s tough with your standard!)."
+    },
+    {
+      "category": "lime",
+      "img": "cardiology_img.jpg",
+      "title": "Cardiology",
+      "quote": "... You and your team are so amazing! Thank you so much for all your great effort! Be sure that this module will be very helpful for all of us and all LATAM countries! I’ll review it, but I’m sure that it surely will be excellent!!"
+    },
+    {
+      "category": "blue",
+      "img": "immunology_img.jpg",
+      "title": "Immunology",
+      "quote": "... I have just reviewed this module and just wanted to say, this is an example where an agency gets it right. The reference package is excellent (clearly marked up for each slide). They have really done a great job with this."
+    },
+    {
+      "category": "purple",
+      "img": "infectious_img.jpg",
+      "title": "Infectious diseases",
+      "quote": "... We can’t wait to see the modules in final format on Monday. We have all our signatories waiting to sign them off... Very exciting, you and the team have been amazing!"
+    }
+  ]
+}

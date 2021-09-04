@@ -1,0 +1,63 @@
+include ../_modules/molecules/stickybar/stickybar
+include ../_modules/organisms/site-header/site-header
+include ../_modules/organisms/site-footer/site-footer
+
+//- Custom Configuration
+block config
+	//- Otherwise default to relative pathing
+	- var pageTitle = 'Delta Kn – Healthcare Learning'
+	- var isHome = false
+	- var baseUrl = './'
+	- var site = htmlWebpackPlugin.options
+	- var assetPath = ''
+
+doctype html
+
+<!--[if lt IE 9]>
+<html class='lt-ie9 no-js' lang='en'>0
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<html class='no-js' lang='en'>
+<!--<![endif]-->
+
+head
+	meta(charset='utf-8')
+	meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+	title= (isHome) ? pageTitle : 'Delta Kn - Lifecycle Learning | ' + pageTitle
+	meta(name='description', content= 'Media Literacy Council')
+	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	link(rel='icon' type='image/png' href= assetPath + 'images/favicon.ico')
+	block stylesheets
+		link(rel='stylesheet', href= assetPath + 'styles/main.css')
+
+body
+	<!--[if lt IE 9]>
+	<p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	header
+		+site-header()
+
+	main 
+		.site-wrapper
+			block content
+	
+	footer
+		+site-footer()
+
+	+stickybar()
+
+	block scripts
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		script(async src="https://www.googletagmanager.com/gtag/js?id=UA-2865470-5")
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-2865470-5');
+		
+		script(src= assetPath + 'scripts/vendor/amcharts_core.js')
+		script(src= assetPath + 'scripts/vendor/amcharts_map.js')
+		script(src= assetPath + 'scripts/main.js')
+		script(src='//player.vimeo.com/api/player.js')
+</html>

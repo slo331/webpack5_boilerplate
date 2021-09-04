@@ -1,0 +1,7 @@
+mixin section-title(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .section-title(class=spec.__class)&attributes(attributes)
+    img.slash(src= assetPath + "images/line_header.svg" title="Header Line" alt="Header Line" width="60" height="72")
+    h2.title=spec.__title

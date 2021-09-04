@@ -1,0 +1,5 @@
+mixin map(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  #map.map-wrap(class=spec.__class data-map=spec.__data)&attributes(attributes)

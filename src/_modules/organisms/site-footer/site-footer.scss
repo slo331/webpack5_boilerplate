@@ -1,0 +1,67 @@
+//site-footer styles 
+.site-footer {
+  background: $grey1;
+  color: $white;
+  padding: 2rem 0 85px;
+  font-size: calc-em(13px);
+  border-top: 5px solid $limeGreen;
+
+  @include desktop {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    @include tablet {
+      display: block;
+    }
+  }
+
+  a {
+    &:hover {
+      @include desktop {
+        color: $limeGreen;
+        text-shadow: 0px 0px 1px $limeGreen;
+      }
+    }
+  }
+
+  .footer {
+    &-item {
+      margin: 20px 0 0;
+
+      @include desktop {
+        margin: 0;
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &-links {
+      .links-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 1rem;
+
+        .link-item {
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+
+    &-amiculum {
+      display: flex;
+      justify-content: flex-end;
+
+      @include tablet {
+        justify-content: flex-start;
+      }
+
+      a {
+        display: block;
+      }      
+    }
+  }
+}

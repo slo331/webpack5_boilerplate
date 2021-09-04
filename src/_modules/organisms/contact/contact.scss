@@ -1,0 +1,42 @@
+//contact styles 
+.contact {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: url($path + 'contact_bg@2x.png') no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+
+  @include desktop {
+    // padding: 3rem 0;
+    padding: 5rem 0;
+  }
+
+  .content {
+    margin: 2rem 0 0;
+    color: $white;
+    padding: 0;
+
+    @include lgDesktop {
+      // padding: 0 0 0 75px;
+      margin: 3rem 0 0;
+    }
+
+    p {
+      margin: 1rem 0;
+      font-size: calc-em(18px);
+    }
+
+    a {
+      color: $limeGreen;
+
+      &:hover {
+        color: $orange;
+
+        @include desktop {
+          text-shadow: 0px 0px 1px $orange;
+        }
+      }
+    }
+  }
+}

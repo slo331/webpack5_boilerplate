@@ -1,0 +1,38 @@
+include ../../atoms/section-title/section-title
+include ../../molecules/listing/listing
+include ../../organisms/join-us/join-us
+
+mixin our-team(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.our-team(class=spec.__class)&attributes(attributes)
+    .container
+      +section-title({
+        "__class": spec.__titleClass,
+        "__title": spec.__title
+      })
+
+      .content 
+        if block
+          block
+
+      +listing({
+        "__list": spec.__list
+      })
+
+      //- +join-us({
+      //-   "__titleClass": "lime-green",
+      //-   "__title": "Join us",
+      //- })(id="join-us")
+      //-   h3.alert No current vacancies
+
+      //-   p Whilst we don't have any current vacancies, we are always interested in talented individuals who are looking for a different type of agency career – one where creativity, dedication and either scientific or digital expertise is used to create stunning learning experiences. If you think you have got what it takes why not send in your CV?
+
+      //-   p 
+      //-   strong Location: 
+      //-   | UK, USA, Singapore, Shanghai
+
+      //-   p 
+      //-     strong Apply: 
+      //-     a(href="https://careers.amiculum.biz/" target="_blank" rel="noopener") https://careers.amiculum.biz/
